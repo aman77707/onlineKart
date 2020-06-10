@@ -4,7 +4,10 @@
   Motivattion for the project came from the idea of creating a basic and sample proof of concept for the      
   online shopping platform. Though the project has missing front-end and is under the scope of enormous     
   improvement it has definitely achored me at a position from where I can take this project from a sample   
-  POC to a completely built working website as an e-commerce platform.  
+  POC to a completely built working website as an e-commerce platform. 
+
+## Project heroku URL:
+  https://onlinekart-ecommerce.herokuapp.com/   
 
 ## TechStack:  
   The application has a backend that uses these key technologies:        
@@ -64,13 +67,13 @@
       * Get categories
       * Get Products
 
-## Working Tokens for type of each user:  
-  * Admin Token :   
-  * Customer Token :  
-  * Guest: Not Required  
+## Postman Collection to help testing APIs:
+  * File with name "CapstoneAPIs.postman_collection.json" has been provided for the reviewer to help in testing the API endpoint
+  * When using the collection please feel free to adjust the values in the query parameters and JSON body.
+  * Tokens are already present in the Authorization header
 
 ## API Endpoints:  
-  * GET: http://127.0.0.1:5000/categories  
+  * GET: https://onlinekart-ecommerce.herokuapp.com/categories  
     This endpoint is used to get a list of all the categories of products available in the store. An example of response looks like:  
     ```
     {  
@@ -88,7 +91,7 @@
     }
     ```
     Permitted Users : Admin, Customer, Guest  
-  * POST: http://127.0.0.1:5000/categories  
+  * POST: https://onlinekart-ecommerce.herokuapp.com/categories  
     This input takes a json of the category to be created as input, an example of such a category looks like:  
     ```
     {
@@ -104,7 +107,7 @@
     }
     ``` 
     Permitted Users : Admin  
-  * PATCH: http://127.0.0.1:5000/categories/<category_id>  
+  * PATCH: https://onlinekart-ecommerce.herokuapp.com/<category_id>  
     This input takes a json of the category to be created as input, an example of such a category looks like:  
     ```
     {
@@ -120,7 +123,7 @@
     }
     ``` 
     Permitted Users : Admin  
-  * DELETE: http://127.0.0.1:5000/categories/<category_id>  
+  * DELETE: https://onlinekart-ecommerce.herokuapp.com/<category_id>  
     This end point deletes the mentioned category ID from the system. An example of response looks like:  
     ```
     {
@@ -129,7 +132,7 @@
     }
     ```
     Permitted Users : Admin  
-  * GET: http://127.0.0.1:5000/products  
+  * GET: https://onlinekart-ecommerce.herokuapp.com/products  
     This endpoint is used to get a list all the products of a specific category available in the store. An example of response looks like:  
     ```
     {  
@@ -147,7 +150,7 @@
     }
     ```
     Permitted Users : Admin, Customer, Guest  
-  * POST: http://127.0.0.1:5000/products  
+  * POST: https://onlinekart-ecommerce.herokuapp.com/products  
     This endpoint is used to add a new product in the store database. This API takes an input as a JSON object for the product to be entered:  
     ```
     {
@@ -170,7 +173,7 @@
     }
     ```
     Permitted Users : Admin  
-  * PATCH: http://127.0.0.1:5000/products/<product_id>  
+  * PATCH: https://onlinekart-ecommerce.herokuapp.com/<product_id>  
     This endpoint is used to update the details of a product in the store database. This API takes an input as a JSON object for the product to be entered:   
     ```
     {
@@ -193,7 +196,7 @@
     }
     ```
     Permitted Users : Admin  
-  * DELETE: http://127.0.0.1:5000/products/<product_id>  
+  * DELETE: https://onlinekart-ecommerce.herokuapp.com/<product_id>  
     This end point is used to delete the mentioned product by the product_id in the databse. It does not take any http request  
     body. A response for such a request looks like:  
     ```
@@ -203,7 +206,7 @@
     }
     ```
     Permitted Users : Admin  
-  * GET: http://127.0.0.1:5000/users  
+  * GET: https://onlinekart-ecommerce.herokuapp.com/users  
     This api end point is used to get all the registered users to the platform. A response to a request made to the api looks like:  
     ```
     {
@@ -225,7 +228,7 @@
     }
     ```
     Permitted Users : Admin  
-  * POST: http://127.0.0.1:5000/users  
+  * POST: https://onlinekart-ecommerce.herokuapp.com/users  
     This endpoint takes a JSON object of the new user about to get registered and adds the user to the database:  
     ```
     {
@@ -241,7 +244,7 @@
     }
     ```
     Permitted Users : Admin  
-  * DELETE: http://127.0.0.1:5000/users/<user_id>  
+  * DELETE: https://onlinekart-ecommerce.herokuapp.com/<user_id>  
     This end point is used to remove a user from the database. A response from such a request looks like:  
     ```
     {
@@ -250,7 +253,7 @@
     }
     ```
     Permitted Users : Admin  
-  * POST: http://127.0.0.1:5000/purchase  
+  * POST: https://onlinekart-ecommerce.herokuapp.com/purchase  
     This end point allows user to make a purchase of a product. Takes a JSON body which couples user_id and product_id:  
     ```
     {
@@ -268,7 +271,7 @@
     }
     ```
     Permitted Users : Customer   
-  * GET: http://127.0.0.1:5000/transactions  
+  * GET: https://onlinekart-ecommerce.herokuapp.com/transactions  
     This endpoint is used to get all the transactions happed against a user. A response when a request made to the api looks like:    
     ```
     {
