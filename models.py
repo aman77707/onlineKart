@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 from flask_migrate import Migrate
 
-#database_path = os.environ.get('DATABASE_URL', 'postgresql://postgres:postgres@localhost:5432/heroku_test') 
 database_path = os.environ.get('DATABASE_URL', None)
 
 db = SQLAlchemy()
