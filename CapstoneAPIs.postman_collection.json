@@ -1,0 +1,837 @@
+{
+	"info": {
+		"_postman_id": "03e2e994-73db-4529-a7ac-5e6de795c790",
+		"name": "CapstoneAPIs",
+		"description": "Set of Capstone APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "GET categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2211d6f2-80dc-4623-b83c-cd848eb16379",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec58fc21-5456-4938-98d9-6ab083e42552",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"groceries\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						},
+						"description": "Adding new categories in the store"
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "18f85574-7655-44bc-9d84-80167cc3797f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"groceries\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/categories/5",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e2864ebb-11a1-474f-9d1b-a554072c722b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e2eee31e-b65a-48f2-9351-c11136905f06",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Monitor\", \n    \"category\" : 4 , \n    \"price\" : 15000, \n    \"description\": \"Accessory for computer\" , \n    \"availability_status\" : true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ff0f3520-344d-40bc-8f85-e72bc4f7319f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"availability_status\": true,\n    \"category_id\": 3,\n    \"description\": \"Clothing product\",\n    \"id\": 2,\n    \"name\": \"Jeans\",\n    \"price\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/products/2",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c6d24349-022a-4b12-b73b-25fde8242b80",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Users are basically customers of the online Kart"
+					},
+					"response": []
+				},
+				{
+					"name": "POST users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a5d5417f-f902-4bc2-8108-b12ecf47945e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Ronald Weasley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5b0d9ab7-f18e-44c1-9e31-668bade55c53",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/users/1",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET transactions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a6ea3f9-e61f-4967-aa9a-d15ea2529103",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/transactions",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"transactions"
+							]
+						},
+						"description": "Get the transactions made over the period of time"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkNjdmNWMxZTI3MWQwYmU4YzZlYmQ3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTg4MCwiZXhwIjoxNTkxODg4Mjc4LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmNhdGVnb3JpZXMiLCJkZWxldGU6cHJvZHVjdHMiLCJkZWxldGU6dXNlcnMiLCJnZXQ6Y2F0ZWdvcmllcyIsImdldDpwcm9kdWN0cyIsImdldDp0cmFuc2FjdGlvbnMiLCJnZXQ6dXNlcnMiLCJwYXRjaDpjYXRlZ29yaWVzIiwicGF0Y2g6cHJvZHVjdHMiLCJwb3N0OmNhdGVnb3JpZXMiLCJwb3N0OnByb2R1Y3RzIiwicG9zdDp1c2VycyJdfQ.aK5bknqvdvn5ZfwG5zZl08wTffDkgl4Ow8ObeM-3tsLaUVH0SaobbXxO7l6NGwWXCqnYsweYIHtjRZ-qiKx_zDCdoRwPQlkABT-uhLbJWE-K0vzhZUpUmwFPXcIY9Cn8njXExWL5W09I41je9FzUjkaAgyYvyGf7LCsMbSfxdP9gSk7fLY8TRWKc6VoQk-inyN4eXUxYEm1zk1EMinv0ExBgLOSLbCGbVd7Vo32MiOS2MReS96PLqNqX3JnCsLbGx8R28k4V4K4R13oTrsdtxBiCbB4T8rhV2iqZVWb2r-h0VyrCmqZJcVp57lR86_n0IxIg5fldTeH6todp2frkLg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "46c94cc4-48b6-482a-9dc4-4498a8a90ee9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c84ca15f-1a22-4d8c-bd43-9f7bdf09a550",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GET categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd1bbe6e-68f8-4061-95c2-9ab6e400fdfb",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "add21fae-ca60-4feb-93df-ff06b5628ae4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST transaction or purchase",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "111db813-e671-4a7c-9971-48a2ea6dc980",
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : 2,\n    \"product_id\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/purchase",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"purchase"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Customer can see the products belonging to a category and make a purchace on choice.",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8c5bff3c-f0a0-4c6c-874f-ab1e3e341ea9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "420167c9-bba5-4991-aff1-6ebb19e65824",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Error Cases with wrong tokens",
+			"item": [
+				{
+					"name": "POST categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1afe30b4-1467-45dd-96ae-a344a93a53b7",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"electronics\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE product ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6ab15898-3f9e-4746-8094-8e63e3616e5a",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://onlinekart-ecommerce.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"onlinekart-ecommerce",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						},
+						"description": "Deleting product using customer token"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikt4R0xFbGtMZHVyREd0QXZjemFfWiJ9.eyJpc3MiOiJodHRwczovL2ZzbmRjYXBzdG9uZS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVkYjI5NmYyMjlkY2UwMDEzZDUzZDU3IiwiYXVkIjoib25saW5lS2FydEFwaSIsImlhdCI6MTU5MTgwMTk3NiwiZXhwIjoxNTkxODg4Mzc0LCJhenAiOiJjQzJsOGZCbDVUc3U3ZTVuT29LY2liUklGOWFlcHJQQyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmNhdGVnb3JpZXMiLCJnZXQ6cHJvZHVjdHMiLCJwb3N0OnRyYW5zYWN0aW9uIl19.H7s0vzqHNTjryE47ocDBR3VSJkccKC9Di4EsltbRiw0rwJbjP9Iq5Jt1LHDXwsOiXQfE-YmoPYp04bm9zZFi6DZLGtq4TiwMYCXwuD4Oct1GzFrK_o_de4P5ya97CbktQfVNeIcOvExXkhZWeEO20ZNHc46R1ayZ9aOusrhduZ_5CLnp9WAStB-GOl-SRiZ49zvhZX74JLZL7s6RfmwNlRk3OWCW5ejiQlIrRFyyrR9ygKhN4OizuxSeOM2dNUdfXMcEpLHnA077-FtozpVTS3oN4ZzbYYVn1rx0Ibg9L_PGNj15BbSZuIvMKFh1Sj9_3emtXFSArdXrwLUZrS1JfQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c355e5a3-de13-47fc-aa32-1263498783ac",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e6d09197-e7b8-43d4-88e1-196547a08fb4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
